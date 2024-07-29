@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.encabezado {
+    width: 850px;
+}
+
+.encabezado__logo {
+    height: 48px;
+    width: 120px;
+    padding: 0;
+    margin: 20px;
+}
+
+.contenido__principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #F6FB7A, #B4E380,#88D66C);
+}
+
+.encriptador__texto__titulo{
+    font-family: "Inter", sans-serif;
+}
+
+.encriptador__texto {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 50%;
+    margin-right: 2%;
+    gap: 20px; /* Espacio entre los elementos hijos */
+}
+
+.encriptador__texto__entrada {
+    height: 250px;
+    border-color: white;
+    resize: none;
+}
+
+.encriptador__texto__botones {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 30px; /* Espacio entre los botones */
+    width: 100%; /* Asegura que el contenedor de botones ocupe todo el ancho disponible */
+    height: 10%;
+}
+
+.encriptador__texto__boton {
+    flex-grow: 1; 
+    width: auto;
+    padding: 10px 30px;
+    border-radius: 8px;
+    border-color: white;
+}
+
+.mostrar__mensaje {
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding-top: 10%;
+    padding-bottom: 8%;
+    margin-top: -5%; /* Ajusta este valor para que se superponga con el encabezado */
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    position: relative;
+    z-index: 0;
+}
+
+.mostrar__mensaje__imagen {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del cuadro */
+    height: auto;
+}
+
+.mostrar__mensaje__subtitulo, .mostrar__mensaje__texto {
+    margin: 10px 0; /* Espacio entre los elementos internos */
+    font-family: "Inter",sans-serif;
+}
+
