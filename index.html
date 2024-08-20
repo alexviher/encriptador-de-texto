@@ -16,22 +16,26 @@
 
             <h1 class="encriptador__texto__titulo">Encriptador</h1>
 
-            <textarea class="encriptador__texto__entrada" placeholder="Escribe tu mensaje aquí"></textarea>
-            <div>
-                <span class="zondicons--exclamation-outline"></span>
+            <textarea class="encriptador__texto__entrada" placeholder="Escribe tu mensaje aquí" cols="40" rows="20"></textarea>
+            <div class="encriptador__texto__alerta">
+                <span class="zondicons__exclamation__outline"></span>
                 <p class="encriptador__texto__instruccion">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="encriptador__texto__botones">
                 <button class="encriptador__texto__boton">Encriptar</button>
-                <button class="encriptador__texto__boton">Desencriptar</button>
+                <button class="encriptador__texto__boton" disabled>Desencriptar</button>
             </div>
         </section>
 
-        <section class="mostrar__mensaje">
-            <img class="mostrar__mensaje__imagen" src="./images/Muñeco.png" alt="Muñeco">
-            <h2 class="mostrar__mensaje__subtitulo">Ningún mensaje fue encontrado</h2>
-            <p class="mostrar__mensaje__texto">Ingresa el texto que quieres encriptar o desencriptar</p>
-        </section>
+        <section class="mostrar">
+            <div class="mostrar__contenedor">
+                <textarea class="mostrar__mensaje" cols="20" rows="10"></textarea>
+                <div class="mostrar__vacio">
+                    <h2 class="Mostrar__alerta">Ningun mensaje fue encontrado</h2>
+                    <button class="copiar">Copiar</button>
+                </div>
+            </div>
     </main>
+    <script src="app.js" defer></script>
 </body>
 </html>
