@@ -6,30 +6,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const alertaVacio = document.querySelector(".Mostrar__alerta");
     const copiarBoton = document.querySelector(".copiar");
 
+    // Función para verificar si el texto contiene mayúsculas
+    const tieneMayusculas = (texto) => /[A-Z]/.test(texto);
+
+    // Función para encriptar texto
     const encriptarTexto = (texto) => {
         const encriptado = texto
             .replace(/e/g, "end")
-            .replace(/i/g, "iman")
-            .replace(/a/g, "ardilla")
-            .replace(/o/g, "orca")
-            .replace(/u/g, "usar");
+            .replace(/i/g, "ir")
+            .replace(/a/g, "ace")
+            .replace(/o/g, "orn")
+            .replace(/u/g, "uder");
         return encriptado;
     };
 
+    // Función para desencriptar texto
     const desencriptarTexto = (texto) => {
         const desencriptado = texto
             .replace(/end/g, "e")
-            .replace(/iman/g, "i")
-            .replace(/ardilla/g, "a")
-            .replace(/orca/g, "o")
-            .replace(/usar/g, "u");
-        return desencriptado;
+            .replace(/ir/g, "i")
+            .replace(/ace/g, "a")
+            .replace(/orn/g, "o")
+            .replace(/uder/g, "u");
+        return desencriptado.toLowerCase();
     };
 
     encriptarBoton.addEventListener("click", () => {
-        const textoEntrada = entrada.value;
-        if (textoEntrada) {
-            mensaje.value = encriptarTexto(textoEntrada);
+        let textoEntrada = entrada.value.trim();
+
+        if (tieneMayusculas(textoEntrada)) {
+            alert("El mensaje contiene letras mayúsculas. Por favor, usa solo letras minúsculas.");
+        } else if (textoEntrada) {
+            mensaje.value = encriptarTexto(textoEntrada.toLowerCase()); // Convertir a minúsculas y encriptar
             alertaVacio.style.display = "none";
             desencriptarBoton.disabled = false;
             entrada.value = ""; // Limpiar el área de entrada
@@ -37,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     desencriptarBoton.addEventListener("click", () => {
-        const textoEncriptado = mensaje.value;
+        const textoEncriptado = mensaje.value.trim();
         if (textoEncriptado) {
             mensaje.value = desencriptarTexto(textoEncriptado);
             entrada.value = mensaje.value; // Mostrar el texto desencriptado en el área de entrada

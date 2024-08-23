@@ -164,11 +164,18 @@ main {
         width: 80%;
         height: 200px;
     }
+   
+    .mostrar__mensaje {
+        background-size: 80%; /* Ajusta este valor según sea necesario */
+        height: 80%; 
+    }
+    
 
     .mostrar__contenedor {
         width: 80%;
         height: 300px;
         margin: 20px 0;
+
     }
 
     .encriptador__texto__botones {
@@ -190,6 +197,10 @@ main {
 
     .mostrar__contenedor {
         height: 250px;
+    }
+    .mostrar__mensaje {
+        background-size: 60%; 
+        height: 60%; 
     }
 
     .encriptador__texto__botones {
